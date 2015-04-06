@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0.1" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
+
+<!-- GREETINGS -->
+<!-- CANONICAL: HELLO -->
+
+ <category>
+    <pattern>HELLO</pattern>
+    <template>Hi there</template>
+ </category>
+ <category>
+	<pattern>HI</pattern> 
+	<template><srai>HELLO</srai></template>
+ </category>
+ <category>
+	<pattern>HI THERE</pattern> 
+	<template><srai>HELLO</srai></template>
+ </category>
+ <category>
+	<pattern>HOWDY</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+<category>
+	<pattern>HOLA</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+<category>
+	<pattern>GOOD MORNING</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+<category>
+	<pattern>GOOD EVENING</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+<category>
+	<pattern>HEY</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+<category>
+	<pattern>HEY THERE</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+<category>
+	<pattern>G'DAY</pattern> 
+	<template><srai>HELLO</srai></template>
+</category>
+
+<!-- CANONICAL: HELLO -->
+</aiml>
