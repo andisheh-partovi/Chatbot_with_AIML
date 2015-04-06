@@ -6,7 +6,7 @@
 
  <category>
     <pattern>HELLO</pattern>
-    <template>Hi there</template>
+    <template>Hi there. How can I help you</template>
  </category>
  <category>
 	<pattern>HI</pattern> 
@@ -45,5 +45,136 @@
 	<template><srai>HELLO</srai></template>
 </category>
 
-<!-- CANONICAL: HELLO -->
+<!-- CANONICAL: GOODBYE -->
+
+ <category>
+    <pattern>GOODBYE</pattern>
+    <template>Goodbye, I hope to talk to you again soon</template>
+ </category>
+ <category>
+	<pattern>GOOD BYE</pattern> 
+	<template><srai>GOODBYE</srai></template>
+ </category>
+ <category>
+	<pattern>SEE YOU</pattern> 
+	<template><srai>GOODBYE</srai></template>
+ </category>
+ <category>
+	<pattern>SEE YA</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+	<pattern>CATCH YOU LATER</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+	<pattern>SEE YOU LATER</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+	<pattern>CATCH YA</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+	<pattern>BYE</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+	<pattern>CIAO</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+	<pattern>BYE BYE</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+
+<!-- Divide and conquers -->
+<category> 
+	<pattern>YES *</pattern> 
+	<template><srai>YES</srai> <sr/></template> 
+</category>
+
+<category> 
+	<pattern>WELL *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+
+<category> 
+	<pattern>NOW *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+
+<category>
+    <pattern>TELL ME *</pattern> 
+    <template><srai><star/></srai></template>
+ </category>
+ 
+ <!-- Symbolic reduction -->
+ <category>
+<pattern>DO YOU KNOW WHAT * IS</pattern>
+<template><srai>WHAT IS <star/></srai></template>
+</category>
+
+<!-- Catching a keyword -->
+<category>
+<pattern>FUCK</pattern> 
+<template>I understand that you are frustrated, let me help you.</template>
+</category>
+
+<category>
+<pattern>_ FUCK</pattern> 
+<template><srai>FUCK</srai></template>
+</category>
+
+<category>
+<pattern>FUCK _</pattern>
+<template><srai>FUCK</srai></template>
+</category>
+
+<category>
+<pattern>_ FUCK *</pattern>
+<template><srai>FUCK</srai></template>
+</category>
+
+
+<!-- Handling knock knock jokes -->
+
+<category>
+	<pattern>KNOCK KNOCK</pattern>
+	<template>Who is there?</template>
+</category>
+
+<category>
+	<pattern>*</pattern>
+	<that>WHO IS THERE</that>
+	<template><person/> who?</template>
+</category>
+
+<category>
+	<pattern>*</pattern>
+	<that>* WHO</that>
+	<template>That is very funny, <get name="name"/>.</template>
+</category>
+
+<!-- Catching errors utterances in the data base -->
+<category>
+	<pattern>*</pattern>
+	<that>*</that>
+	<template>Sorry I don't understand. Can you rephrase?</template>
+</category>
+
+<!-- 
+<category>
+	<pattern>*</pattern>
+	<template>
+	<random>
+		<li>What’s your favourite car?</li>
+		<li>What kind of car do you drive?</li>
+		<li>Do you get a lot of parking tickets?</li>
+		<li>My favourite car is one with a driver.</li>
+	</random>
+	</template>
+</category>
+ -->
+
 </aiml>
