@@ -6,7 +6,7 @@
 
  <category>
     <pattern>HELLO</pattern>
-    <template>Hi there. How can I help you</template>
+    <template>AHOY. Greetings. sheldon cooper.</template>
  </category>
  <category>
 	<pattern>HI</pattern> 
@@ -88,6 +88,27 @@
 	<template><srai>GOODBYE</srai></template>
 </category>
 
+<!-- Handling his name -->
+ <category>
+    <pattern>SHELDON</pattern>
+    <template>Well spotted. I'm sheldon cooper.</template>
+ </category>
+ 
+ <category>
+	<pattern>COOPER</pattern> 
+	<template><srai>SHELDON</srai></template>
+</category>
+
+<category> 
+	<pattern>SHELDON *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+
+<category> 
+	<pattern>COOPER *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+
 <!-- Divide and conquers -->
 <category> 
 	<pattern>YES *</pattern> 
@@ -107,18 +128,55 @@
 <category>
     <pattern>TELL ME *</pattern> 
     <template><srai><star/></srai></template>
- </category>
+</category>
+
+<category>
+    <pattern>GIVE ME *</pattern> 
+    <template><srai><star/></srai></template> 
+</category>
+ 
+<category>
+    <pattern>HEY *</pattern> 
+    <template><srai>HELLO</srai> <sr/></template> 
+</category>
+ 
+<category>
+    <pattern>HI *</pattern> 
+    <template><srai>HELLO</srai> <sr/></template> 
+</category>
+ 
+<category>
+    <pattern>HELLO *</pattern> 
+    <template><srai>HELLO</srai> <sr/></template> 
+</category>
+ 
+<category>
+    <pattern>HEY THERE *</pattern> 
+    <template><srai>HELLO</srai> <sr/></template> 
+</category>
+ 
+<category>
+    <pattern>HELLO THERE *</pattern> 
+    <template><srai>HELLO</srai> <sr/></template> 
+</category>
+
+<category>
+    <pattern>HI THERE *</pattern> 
+    <template><srai>HELLO</srai> <sr/></template> 
+</category>
  
  <!-- Symbolic reduction -->
+ 
  <category>
 <pattern>DO YOU KNOW WHAT * IS</pattern>
 <template><srai>WHAT IS <star/></srai></template>
 </category>
 
 <!-- Catching a keyword -->
+
 <category>
 <pattern>FUCK</pattern> 
-<template>I understand that you are frustrated, let me help you.</template>
+<template>Okay, I'm gonna let that slide because I know you are hopped up on tea bags.</template>
 </category>
 
 <category>
@@ -200,6 +258,107 @@
 	<template>That is very funny, <get name="name"/>.</template>
 </category>
 
+<!-- Energy Domain -->
+
+<!-- TIPS -->
+<category>
+	<pattern>SAVE ENERGY</pattern>
+	<template>remember these tips:<srai>TIP1</srai> <srai>TIP2</srai> <srai>TIP3</srai> <srai>TIP4</srai> <srai>TIP5</srai> </template>
+</category>
+
+<category>
+    <pattern>HOW CAN I  *</pattern> 
+    <template><srai><star/></srai></template> 
+</category>
+
+<category>
+	<pattern>REDUCE MY BILL</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+<category>
+	<pattern>REDUCE MY POWER BILL</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+ 
+ <category>
+	<pattern>REDUCE MY ELECTRICITY BILL</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+<category>
+	<pattern>REDUCE MY ELECTRICITY USAGE</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+ 
+<category>
+	<pattern>SAVE ELECTRICITY</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+<category>
+	<pattern>SAVE MONEY ON BILLS</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+<category>
+	<pattern>SAVE MONEY ON POWER</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+<category>
+	<pattern>SAVE MONEY ON ELECTRICITY</pattern> 
+	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+<category>
+	<pattern>A TIP ON SAVING</pattern>
+	<template>
+	<random>
+		<li><srai>TIP1</srai></li>
+		<li><srai>TIP2</srai></li>
+		<li><srai>TIP3</srai></li>
+		<li><srai>TIP4</srai></li>
+		<li><srai>TIP5</srai></li>
+	</random>
+	</template>
+</category>
+
+<category>
+	<pattern>SAVE MONEY ON ELECTRICITY</pattern> 
+	<template><srai>A TIP ON SAVING</srai></template>
+</category>
+
+<category>
+	<pattern>A TIP</pattern> 
+	<template><srai>A TIP ON SAVING</srai></template>
+</category>
+
+<category>
+	<pattern>TIP1</pattern>
+	<template>Wear the right clothes.</template>
+</category>
+
+<category>
+	<pattern>TIP2</pattern>
+	<template>Shut doors and close curtains.</template>
+</category>
+
+<category>
+	<pattern>TIP3</pattern>
+	<template>Turn heaters and coolers off when you don't need them.</template>
+</category>
+
+<category>
+	<pattern>TIP4</pattern>
+	<template>Wash clothes using cold water.</template>
+</category>
+
+<category>
+	<pattern>TIP5</pattern>
+	<template>Run your fridge efficiently.</template>
+</category>
+
 <!-- Catching errors utterances in the data base -->
 <category>
 	<pattern>*</pattern>
@@ -207,19 +366,7 @@
 	<template>Sorry I don't understand. Can you rephrase?</template>
 </category>
 
-<!-- 
-<category>
-	<pattern>*</pattern>
-	<template>
-	<random>
-		<li>What’s your favourite car?</li>
-		<li>What kind of car do you drive?</li>
-		<li>Do you get a lot of parking tickets?</li>
-		<li>My favourite car is one with a driver.</li>
-	</random>
-	</template>
-</category>
- -->
+
  
  <!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
 <!-- -->

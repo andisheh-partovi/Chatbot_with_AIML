@@ -6,7 +6,7 @@ k = aiml.Kernel()
 k.learn('consultant.aiml')
 
 # set a constant
-k.setBotPredicate("name", "Mr.White")
+k.setBotPredicate("name", "Sheldon Cooper")
 k.setBotPredicate("city", "Melbourne")
 
 while True: 
