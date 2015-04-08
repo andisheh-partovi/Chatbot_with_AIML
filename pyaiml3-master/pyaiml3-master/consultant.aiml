@@ -136,7 +136,51 @@
 <template><srai>FUCK</srai></template>
 </category>
 
+<!-- EXTRACTING INFORMATION FROM THE USER -->
+<category>
+  <pattern>MY NAME IS *</pattern>
+  <template>
+    <think><set name="name"><star index="1"/></set></think>
+    I'm very pleased to meet you, <get name="name"/>.
+  </template>
+</category> 
 
+<category>
+  <pattern>I AM *</pattern>
+  <that>How old are you?</that>
+  <template>
+	<think><set name="age"><star index="1"/></set></think>
+	Wow, you look much younger, <get name="name"/>. 
+  </template>
+</category> 
+
+<category>
+  <pattern>I AM FROM *</pattern>
+  <template>
+	<think><set name="city"><star index="1"/></set></think>
+	cool so you are <star index="1"/>ian, <get name="name"/>. 
+  </template>
+</category> 
+
+<!-- Giving information to the user -->
+
+<category>
+  <pattern>WHAT IS YOUR NAME</pattern>
+  <template>My name is <bot name="name"></bot>. And you?</template>
+</category>
+
+<category>
+  <pattern>WHERE ARE YOU FROM</pattern>
+  <template>I'm from <bot name="city"></bot>. And you?</template>
+</category>
+
+<!-- Using system -->
+<!-- 
+<category> 
+	<pattern>WHAT TIME IS IT</pattern> 
+	<template>The time is: <system>date</system></template> 
+</category>
+  -->
 <!-- Handling knock knock jokes -->
 
 <category>
