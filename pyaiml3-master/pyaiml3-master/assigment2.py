@@ -3,7 +3,7 @@ sys.path.append('./aiml')
 
 import aiml
 k = aiml.Kernel()
-k.learn('consultant.aiml')
+k.learn('sheldon_scripted.aimlhow are you')
 
 # set a constant
 k.setBotPredicate("name", "Sheldon Cooper")
