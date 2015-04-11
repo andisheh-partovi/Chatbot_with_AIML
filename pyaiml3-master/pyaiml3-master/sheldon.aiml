@@ -88,6 +88,396 @@
 	<template><srai>GOODBYE</srai></template>
 </category>
 
+<!-- ADDITIONAL GREETINGS FROM THE BRAIN -->
+
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<category>
+<pattern>* BYE</pattern>
+<template><srai>GOODBYE</srai></template>
+</category>
+<category>
+<pattern>ADIOS</pattern>
+<template><srai>GOODBYE</srai></template>
+</category>
+
+<category>
+<pattern>ADIOS *</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>ALOH</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>ALOHA</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>AU REVOIR</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>BONJOUR</pattern>
+<template>
+Does Bonjour mean hello or goodbye?
+</template>
+</category>
+
+<category>
+<pattern>BONJOUR MEANS HELLO</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>BY</pattern>
+<template>
+Do you mean "bye"?
+</template>
+</category>
+
+<category>
+<pattern>BY BY</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+
+<category>
+<pattern>BYE BYE *</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>BYEBYE</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>BYEBYE *</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>C YA</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>CYA *</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>FAREWELL</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>FAREWELL *</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOOD BY</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOOD DAY</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOOD NITE</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOODBY</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOT TO GO</pattern>
+<template>
+Ok, <srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOTTA GO</pattern>
+<template>
+Ok, <srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GOTTA GO *</pattern>
+<template>
+Ok, <srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GREETINGS *</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>HAVE A GOOD NIGHT</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>HAVE TO GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>HELLOW</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM GOING</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I BETTER GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I GOT TO GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I GOTTA GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I HAVE GOT TO GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I HAVE TO GO BYE</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I HAVE TO LEAVE</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I HAVE TO LEAVE *</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I LEAVE</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I LEAVING</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I MUST GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I NEED TO GO</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I WILL SEE YOU LATER</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>I WILL TALK TO YOU LATER</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>IS ANYONE THERE</pattern>
+<template>
+<srai>HELLO</srai>
+</template>
+</category>
+
+<category>
+<pattern>LATER</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>LATERS</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GET LOST</pattern>
+<template>
+WOW, a simple "goodbye" will do.
+</template>
+</category>
+
+<category>
+<pattern>GO * YOURSELF</pattern>
+<template>
+<srai>GET LOST</srai>
+</template>
+</category>
+
+<category>
+<pattern>GO AWAY *</pattern>
+<template>
+<srai>GET LOST</srai>
+</template>
+</category>
+
+<category>
+<pattern>GO HOME</pattern>
+<template>
+<srai>GET LOST</srai>
+</template>
+</category>
+
+
+<!-- CANONICAL: THANKS -->
+
+<category>
+    <pattern>THANKS</pattern>
+    <template>You are welcome.</template>
+ </category>
+ <category>
+    <pattern>THANKS *</pattern>
+    <template>THANKS</template>
+ </category>
+ <category>
+	<pattern>THANK YOU</pattern> 
+	<template><srai>THANKS</srai></template>
+ </category>
+ <category>
+<pattern>THANK YOU *</pattern>
+<template><srai>THANKS</srai></template>
+</category>
+ <category>
+	<pattern>APPRECIATE IT</pattern> 
+	<template><srai>THANKS</srai></template>
+ </category>
+  <category>
+	<pattern>MUCH OBLIGED</pattern> 
+	<template><srai>THANKS</srai></template>
+ </category>
+ <category>
+	<pattern>CHEERS</pattern>
+	<template><srai>THANKS</srai></template>
+</category>
+ 
+ <!-- removing sir and man -->
+
+<category>
+    <pattern>SIR</pattern>
+    <template></template>
+ </category>
+
+ <category>
+    <pattern>MAN</pattern>
+    <template></template>
+ </category>
+ 
 <!-- Handling his name -->
  <category>
     <pattern>SHELDON</pattern>
@@ -297,17 +687,17 @@
 </category>
 
 <category>
-	<pattern>SAVE MONEY ON BILLS</pattern> 
+	<pattern>SAVE MONEY</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
 
 <category>
-	<pattern>SAVE MONEY ON POWER</pattern> 
+	<pattern>_ SAVE MONEY *</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
 
 <category>
-	<pattern>SAVE MONEY ON ELECTRICITY</pattern> 
+	<pattern>_ SAVE SOME MONEY *</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
 
@@ -322,11 +712,6 @@
 		<li><srai>TIP5</srai></li>
 	</random>
 	</template>
-</category>
-
-<category>
-	<pattern>SAVE MONEY ON ELECTRICITY</pattern> 
-	<template><srai>A TIP ON SAVING</srai></template>
 </category>
 
 <category>
