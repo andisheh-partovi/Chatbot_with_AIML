@@ -582,6 +582,7 @@ WOW, a simple "goodbye" will do.
 </category>
 
 <!-- EXTRACTING INFORMATION FROM THE USER -->
+
 <category>
   <pattern>MY NAME IS *</pattern>
   <template>
@@ -2096,20 +2097,20 @@ WOW, a simple "goodbye" will do.
 <!-- FROM DIALOGUE SAMPLES -->
 
 <category>
-<pattern>TALK</pattern> 
-<template>Lets talk about electricity.</template>
+	<pattern>TALK</pattern> 
+	<template>Lets talk about electricity.</template>
 </category>
 <category>
-<pattern>_ TALK</pattern> 
-<template><srai>TALK</srai></template>
+	<pattern>_ TALK</pattern> 
+	<template><srai>TALK</srai></template>
 </category>
 <category>
-<pattern>TALK _</pattern>
-<template><srai>TALK</srai></template>
+	<pattern>TALK _</pattern>
+	<template><srai>TALK</srai></template>
 </category>
 <category>
-<pattern>_ TALK *</pattern>
-<template><srai>TALK</srai></template>
+	<pattern>_ TALK *</pattern>
+	<template><srai>TALK</srai></template>
 </category>
 <category>
     <pattern>_ DISCUSS *</pattern>
@@ -2135,29 +2136,7 @@ WOW, a simple "goodbye" will do.
     <pattern>CAN I TAKE YOUR TIME</pattern>
     <template>sure<srai>TALK</srai></template>
  </category>  
- 
-<category>
-    <pattern>ELECTRICITY BILL</pattern>
-    <template>What about my electricity bill?</template>
- </category>
- <category>
-    <pattern>_ ELECTRICITY BILL *</pattern>
-    <template><srai>ELECTRICITY BILL</srai></template>
- </category>
-  <category>
-	<pattern>_ ELECTRICITY BILL</pattern> 
-	<template><srai>ELECTRICITY BILL</srai></template>
-</category>
-<category>
-	<pattern>ELECTRICITY BILL _</pattern>
-	<template><srai>ELECTRICITY BILL</srai></template>
-</category>
-<category>
-    <pattern>*</pattern>
-    <that>WHAT ABOUT MY ELECTRICITY BILL</that>
-    <template>I'm paying too much for it.</template>
- </category>
- 
+
  <category>
     <pattern>USAGE</pattern>
     <template>We are using too much electricity playing Xbox</template>
@@ -2226,125 +2205,77 @@ WOW, a simple "goodbye" will do.
  </category>
 
 <category>
-    <pattern>JOB OF THE PEOPLE LIVING HERE</pattern>
+    <pattern>JOB</pattern>
     <template> We are both <bot name="job"></bot> s living here.</template>
  </category>
 <category>
     <pattern>WHAT DO THEY DO</pattern>
-    <template> <srai>JOB OF THE PEOPLE LIVING HERE</srai></template>
+    <template> <srai>JOB</srai></template>
  </category>
 <category>
     <pattern>_ JOB *</pattern>
-    <template> <srai>JOB OF THE PEOPLE LIVING HERE</srai></template>
+    <template> <srai>JOB</srai></template>
+ </category>
+ <category>
+    <pattern>_ JOB</pattern>
+    <template> <srai>JOB</srai></template>
+ </category>
+ <category>
+    <pattern>JOB _</pattern>
+    <template> <srai>JOB</srai></template>
  </category>
 <category>
     <pattern>_ OCCUPATIONS *</pattern>
-    <template> <srai>JOB OF THE PEOPLE LIVING HERE</srai></template>
+    <template> <srai>JOB</srai></template>
+ </category>
+ <category>
+    <pattern>_ OCCUPATIONS</pattern>
+    <template> <srai>JOB</srai></template>
+ </category>
+ <category>
+    <pattern>OCCUPATIONS _</pattern>
+    <template> <srai>JOB</srai></template>
  </category>
 
 <category>
     <pattern>DAYS AT HOME</pattern>
-    <template>We stay home mostly in the weekends.</template>
+    <template>We stay home mostly in the weekends ad go to uni on weekdays.</template>
  </category>
 <category>
     <pattern>HOW MANY DAYS A WEEK DO THEY STAY AT HOME</pattern>
-    <template>Weekends mostly</template>
- </category>
-
-<category>
-    <pattern>DO YOU THINK YOU ARE PAYING TOO MUCH FOR  ELECTRICITY</pattern>
-    <template> No, I don’t think so. Do you think I can save some money?</template>
- </category>
-
-<category>
-    <pattern>WHAT IS THE AMOUNT YOUR QUARTERLY POWER BILL COMES TO</pattern>
-    <template>$300 in the winter and about $200 in the summer</template>
- </category>
-
-<category>
-    <pattern>THAT IS VERY CHEAP</pattern>
-    <template>I have solar panels</template>
- </category>
-<category>
-    <pattern>HOW GREEN OF YOU</pattern>
-    <template>Not green, they are cost effective.</template>
- </category>
-
-<category>
-    <pattern>I HAVE SOME GENERAL TIPS ABOUT HOW TO SAVE ELECTRICITY </pattern>
-    <template>Oh, that sounds interesting!</template>
- </category>
-<category>
-    <pattern>YOU SHOULD UNPLUG YOUR PHONE ONCE IT IS CHARGED</pattern>
-    <template>So should I unplug the whole charger or just the phone?</template>
- </category>
-<category>
-    <pattern>JUST THE PHONE</pattern>
-    <template>Oh, OK then, thanks.</template>
+    <template><srai>DAYS AT HOME</srai></template>
  </category>
  <category>
-    <pattern>YOU SHOULD CHECK YOUR FRIDGE TEMPERATURE OF YOUR FRIDGE. IF IT IS TOO COLD IT WILL USE A LOT OF POWER.  ALSO MAKE SURE YOU ARE NOT COOLING AN EMPTY FRIDGE!</pattern>
-    <template> Brrrr, my fridge is cold!  What temp should it be set to?</template>
+    <pattern>HOW MANY DAYS _</pattern>
+    <template><srai>DAYS AT HOME</srai></template>
  </category>
- <category>
-    <pattern>BETWEEN 0 AND 5 DEGREES</pattern>
-    <template>What is the correct temp for milk? I only really have milk in my fridge.</template>
+  <category>
+    <pattern>_ HOW MANY DAYS</pattern>
+    <template><srai>DAYS AT HOME</srai></template>
  </category>
- <category>
-    <pattern>FOR MILK BETWEEN 1 AND 4 SHOULD BE GOOD</pattern>
-    <template>OK, thanks.</template>
- </category>
-
- <category>
-    <pattern>HOW LONG DOES EACH PERSON SPEND IN THE HOME ON AVERAGE EACH DAY</pattern>
-    <template>14 hours</template>
- </category>
- <category>
-    <pattern>HOW LONG DOES EACH PERSON SPEND IN THE HOME ON WEEKENDS</pattern>
-    <template>14 to 24 hours</template>
- </category>
- <category>
-    <pattern>DO YOU EXPECT A LARGE BILL</pattern>
-    <template>No, we have LED lights and dont use many appliances</template>
- </category>
- <category>
-    <pattern>THOSE ARE VERY EFFICIENT</pattern>
-    <template>Yes, they are.</template>
- </category>
- <category>
-    <pattern>SO JUST APPLY THESE TIPS IN THE FUTURE AND YOU SHOULD SAVE MONEY</pattern>
-    <template>I will, thank you</template>
- </category>
+  <category>
+    <pattern>_ HOW MANY DAYS *</pattern>
+    <template><srai>DAYS AT HOME</srai></template>
+ </category> 
  
-
-
-<category>
-    <pattern>DO YOU WANT TO  *</pattern> 
-    <template><srai><star/></srai></template> 
-</category>
-<category>
-    <pattern>DO YOU LIKE TO  *</pattern> 
-    <template><srai><star/></srai></template> 
-</category>
-
  <category>
 	<pattern>SAVE ENERGY</pattern>
 	<template>I like to know how to save money and energy</template>
 </category>
 <category>
-	<pattern>REDUCE YOUR BILL</pattern> 
+	<pattern>REDUCE</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
 <category>
-	<pattern>REDUCE YOUR POWER BILL</pattern> 
+	<pattern>REDUCE _</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
  <category>
-	<pattern>REDUCE YOUR ELECTRICITY BILL</pattern> 
+	<pattern>_ REDUCE</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
 <category>
-	<pattern>REDUCE YOUR ELECTRICITY USAGE</pattern> 
+	<pattern>_ REDUCE *</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
 </category>
 <category>
@@ -2378,6 +2309,165 @@ WOW, a simple "goodbye" will do.
 <category>
 	<pattern>_ SAVE SOME MONEY</pattern> 
 	<template><srai>SAVE ENERGY</srai></template>
+</category>
+
+ <category>
+    <pattern>BILL</pattern>
+    <template>I pay <bot name="summerBill"></bot> in summers and <bot name="winterBill"></bot> in winters.</template>
+ </category>
+  <category>
+    <pattern>PAY _</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+  <category>
+    <pattern>_ PAY</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+  <category>
+    <pattern>_ PAY *</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+   <category>
+    <pattern>PAYING _</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+  <category>
+    <pattern>_ PAYING</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+  <category>
+    <pattern>_ PAYING *</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+   <category>
+    <pattern>WHAT IS YOUR BILL</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+<category>
+    <pattern>WHAT IS THE AMOUNT YOUR QUARTERLY POWER BILL COMES TO</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+ <category>
+    <pattern>_ BILL *</pattern>
+    <template><srai>BILL</srai></template>
+ </category>
+  <category>
+	<pattern>_ BILL</pattern> 
+	<template><srai>BILL</srai></template>
+</category>
+<category>
+	<pattern>BILL _</pattern>
+	<template><srai>BILL</srai></template>
+</category>
+<category>
+    <pattern>*</pattern>
+	<that>I PAY 300 IN SUMMERS AND 200 IN WINTERS</that>
+    <template>Well, I have solar panels.</template>
+ </category>
+ 
+<category>
+    <pattern>*</pattern>
+	<that>WELL I HAVE SOLAR PANELS</that>
+    <template>Solar panels are cost effective and cool.</template>
+ </category>
+ 
+ <category>
+    <pattern>SOLAR PANEL</pattern>
+    <template>I love having solar panels. They are cost effective and coll.</template>
+ </category>
+  <category>
+    <pattern>SOLAR PANEL _</pattern>
+    <template><srai>SOLAR PANEL</srai></template>
+ </category>
+  <category>
+    <pattern>_ SOLAR PANEL</pattern>
+    <template><srai>SOLAR PANEL</srai></template>
+ </category>
+  <category>
+    <pattern>_ SOLAR PANEL *</pattern>
+    <template><srai>SOLAR PANEL</srai></template>
+ </category>
+
+<category>
+    <pattern>TIPS</pattern>
+    <template>Cool! I love tips</template>
+ </category>
+ <category>
+    <pattern>TIPS _</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ TIPS</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ TIPS *</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+     <category>
+    <pattern>TIP _</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ TIP</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ TIP *</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+ 
+<category>
+    <pattern>*</pattern>
+	<that>COOL I LOVE TIPS</that>
+    <template>I'll remember that.</template>
+ </category>
+ 
+ <category> 
+<pattern>I AM BLOND</pattern> 
+<template>You sound very 
+<condition> 
+<li name="gender" value="female"> attractive.</li> 
+<li name="gender" value="male"> handsome.</li> 
+</condition> 
+</template> 
+</category>
+ 
+ <category>
+    <pattern>QUESTIONS</pattern>
+    <template>yes. Our fridge is cold! and it is almost empty. What temp should it be set to?</template>
+ </category>
+  <category>
+    <pattern>DO YOU HAVE ANY QUESTIONS</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+
+ <category>
+    <pattern>*</pattern>
+	<that>YES OUR FRIDGE IS COLD AND IT IS ALMOST EMPTY WHAT TEMP SHOULD IT BE SET TO</that>
+    <template>What is the correct temp for milk? We only really have milk in my fridge.</template>
+ </category>
+ 
+ <category>
+    <pattern>*</pattern>
+	<that>WHAT IS THE CORRECT TEMP FOR MILK WE ONLY REALLY HAVE MILK IN MY FRIDGE</that>
+    <template>OK, thanks.</template>
+ </category>
+
+
+<category>
+    <pattern>DO YOU WANT TO  *</pattern> 
+    <template><srai><star/></srai></template> 
+</category>
+<category>
+    <pattern>DO YOU LIKE TO  *</pattern> 
+    <template><srai><star/></srai></template> 
+</category>
+
+
+<category>
+	<pattern>IS THAT SO</pattern> 
+	<template>yes</template>
 </category>
 
 

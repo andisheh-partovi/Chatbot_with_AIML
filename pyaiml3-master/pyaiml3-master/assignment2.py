@@ -15,6 +15,8 @@ k.setBotPredicate("friendAge", "32")
 k.setBotPredicate("job", "student")
 k.setBotPredicate("weekdaysHours", "14")
 k.setBotPredicate("weekendsHours", "24")
+k.setBotPredicate("summerBill", "$300")
+k.setBotPredicate("winterBill", "$200")
 
 while True: 
     response = k.respond(input("User> "))
