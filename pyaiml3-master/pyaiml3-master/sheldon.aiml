@@ -1,12 +1,146 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <aiml version="1.0.1" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
 
+<!-- Topics -->
+<!-- They have to be included here otherwise we'll have a problem -->
+
+ <category>
+    <pattern>QUESTIONS</pattern>
+    <template>
+	yes. 
+		<condition> 
+			<li name="didFridge" value="false">Our fridge is cold! and being students, it is always almost empty. What temp should it be set to?<think><set name="didFridge">true</set></think></li> 
+			<li name="didXbox" value="false">My friends play Xbox here a lot. How much power does an Xbox use?<think><set name="didXbox">true</set></think></li>
+			<li name="finish" value="false">Hmm...Actually no. I don't have any more questions and I better go. I have an assignment due.<think><set name="finish">true</set></think></li>			
+		</condition> 
+	</template>
+ </category>
+ 
+ <category>
+    <pattern>DO YOU HAVE ANY QUESTIONS</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>DO YOU HAVE ANY QUESTIONS _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+<category>
+    <pattern>ANY QUESTIONS</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANY QUESTIONS _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ANY QUESTIONS</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ANY QUESTIONS *</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANY OTHER QUESTIONS</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANY OTHER QUESTIONS _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ANY OTHER QUESTIONS *</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ANY OTHER QUESTIONS</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANY QUESTION</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANY QUESTION _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+  <category>
+    <pattern>DO YOU HAVE ANY QUESTION</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>DO YOU HAVE ANY QUESTION _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+<category>
+    <pattern>ANY QUESTION</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANY QUESTION _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <category>
+    <pattern>ANYTHING ELSE _</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+  <category>
+    <pattern>ANYTHING ELSE</pattern>
+    <template><srai>QUESTIONS</srai></template>
+ </category>
+ <!-- fridge -->
+ 
+ <category>
+    <pattern>*</pattern>
+	<that>YES OUR FRIDGE IS COLD AND BEING STUDENTS IT IS ALWAYS ALMOST EMPTY WHAT TEMP SHOULD IT BE SET TO</that>
+    <template>Hmm... What is the correct temp for milk? We only really have milk in my fridge.</template>
+ </category>
+ 
+  <category>
+    <pattern>*</pattern>
+	<that>OUR FRIDGE IS COLD AND BEING STUDENTS IT IS ALWAYS ALMOST EMPTY WHAT TEMP SHOULD IT BE SET TO</that>
+    <template>Hmm... What is the correct temp for milk? We only really have milk in my fridge.</template>
+ </category>
+ 
+ <category>
+    <pattern>*</pattern>
+	<that>HMM WHAT IS THE CORRECT TEMP FOR MILK WE ONLY REALLY HAVE MILK IN MY FRIDGE</that>
+    <template>OK, thanks.</template>
+ </category>
+
+ <!-- Xbox -->
+ 
+  <category>
+    <pattern>*</pattern>
+	<that>YES MY FRIENDS PLAY XBOX HERE A LOT HOW MUCH POWER DOES AN XBOX USE</that>
+    <template>I see. In any ways playing too much can not be good for their health.</template>
+ </category>
+ 
+   <category>
+    <pattern>*</pattern>
+	<that>MY FRIENDS PLAY XBOX HERE A LOT HOW MUCH POWER DOES AN XBOX USE</that>
+    <template>I see. In any ways playing too much can not be good for their health.</template>
+ </category>
+ <!-- 
+ <category>
+    <pattern>*</pattern>
+	<that>I SEE IN ANY WAYS PLAYING TOO MUCH CAN NOT BE GOOD FOR THEIR HEALTH</that>
+    <template>OK, thanks.</template>
+ </category>
+  -->
+  
+  
 <!-- GREETINGS -->
 <!-- CANONICAL: HELLO -->
 
  <category>
     <pattern>HELLO</pattern>
-    <template>AHOY. Greetings. sheldon cooper.</template>
+    <template>
+		<think><set name="didXbox">false</set></think>     <!-- Initializing values must be done here -->
+		<think><set name="didFridge">false</set></think>
+		<think><set name="finish">false</set></think>
+		Hi there. 
+	</template>
  </category>
  <category>
 	<pattern>HI</pattern> 
@@ -59,12 +193,24 @@
 	<pattern>GOOD BYE</pattern> 
 	<template><srai>GOODBYE</srai></template>
  </category>
+  <category>
+	<pattern>GOOD BYE _</pattern> 
+	<template><srai>GOODBYE</srai></template>
+ </category>
  <category>
 	<pattern>SEE YOU</pattern> 
 	<template><srai>GOODBYE</srai></template>
  </category>
+  <category>
+	<pattern>SEE YOU _</pattern> 
+	<template><srai>GOODBYE</srai></template>
+ </category>
  <category>
 	<pattern>SEE YA</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+ <category>
+	<pattern>SEE YA _</pattern> 
 	<template><srai>GOODBYE</srai></template>
 </category>
 <category>
@@ -72,7 +218,7 @@
 	<template><srai>GOODBYE</srai></template>
 </category>
 <category>
-	<pattern>SEE YOU LATER</pattern> 
+	<pattern>CATCH YOU LATER _</pattern> 
 	<template><srai>GOODBYE</srai></template>
 </category>
 <category>
@@ -80,15 +226,19 @@
 	<template><srai>GOODBYE</srai></template>
 </category>
 <category>
+	<pattern>CATCH YA _</pattern> 
+	<template><srai>GOODBYE</srai></template>
+</category>
+<category>
 	<pattern>BYE</pattern> 
 	<template><srai>GOODBYE</srai></template>
 </category>
 <category>
-	<pattern>CIAO</pattern> 
+	<pattern>BYE _</pattern> 
 	<template><srai>GOODBYE</srai></template>
 </category>
 <category>
-	<pattern>BYE BYE</pattern> 
+	<pattern>CIAO</pattern> 
 	<template><srai>GOODBYE</srai></template>
 </category>
 
@@ -159,14 +309,6 @@ Do you mean "bye"?
 
 <category>
 <pattern>BY BY</pattern>
-<template>
-<srai>GOODBYE</srai>
-</template>
-</category>
-
-
-<category>
-<pattern>BYE BYE *</pattern>
 <template>
 <srai>GOODBYE</srai>
 </template>
@@ -244,6 +386,13 @@ Do you mean "bye"?
 
 <category>
 <pattern>GOT TO GO</pattern>
+<template>
+Ok, <srai>GOODBYE</srai>
+</template>
+</category>
+
+<category>
+<pattern>GO</pattern>
 <template>
 Ok, <srai>GOODBYE</srai>
 </template>
@@ -328,6 +477,12 @@ Ok, <srai>GOODBYE</srai>
 
 <category>
 <pattern>I HAVE TO GO BYE</pattern>
+<template>
+<srai>GOODBYE</srai>
+</template>
+</category>
+<category>
+<pattern>I HAVE TO GO</pattern>
 <template>
 <srai>GOODBYE</srai>
 </template>
@@ -498,30 +653,70 @@ WOW, a simple "goodbye" will do.
 
 <!-- Divide and conquers -->
 <category> 
-	<pattern>YES *</pattern> 
-	<template><srai>YES</srai> <sr/></template> 
+	<pattern>NO *</pattern> 
+	<template><srai><star/></srai></template> 
 </category>
-
+<category> 
+	<pattern>YES *</pattern> 
+	<template><srai><star/></srai></template> 
+</category>
 <category> 
 	<pattern>WELL *</pattern> 
 	<template><srai><star/></srai></template>
 </category>
-
 <category> 
 	<pattern>NOW *</pattern> 
 	<template><srai><star/></srai></template>
 </category>
-
+<category> 
+	<pattern>OKAY *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+<category> 
+	<pattern>OK *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+<category> 
+	<pattern>OH *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+<category> 
+	<pattern>AH *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
 <category>
     <pattern>TELL ME *</pattern> 
     <template><srai><star/></srai></template>
 </category>
-
 <category>
     <pattern>GIVE ME *</pattern> 
     <template><srai><star/></srai></template> 
 </category>
- 
+<category>
+    <pattern>COOL *</pattern> 
+    <template><srai><star/></srai></template> 
+</category>
+<category>
+    <pattern>NICE *</pattern> 
+    <template><srai><star/></srai></template> 
+</category>
+<category> 
+	<pattern>I SEE *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+<category> 
+	<pattern>SO *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+<category> 
+	<pattern>RIGHT *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+<category> 
+	<pattern>ALRIGHT *</pattern> 
+	<template><srai><star/></srai></template>
+</category>
+
 <category>
     <pattern>HEY *</pattern> 
     <template><srai>HELLO</srai> <sr/></template> 
@@ -593,10 +788,8 @@ WOW, a simple "goodbye" will do.
 
 <category>
   <pattern>I AM *</pattern>
-  <that>How old are you?</that>
   <template>
-	<think><set name="age"><star index="1"/></set></think>
-	Wow, you look much younger, <get name="name"/>. 
+	Nice to meet you. I am <bot name="name"></bot>.
   </template>
 </category> 
 
@@ -612,7 +805,7 @@ WOW, a simple "goodbye" will do.
 
 <category>
   <pattern>WHAT IS YOUR NAME</pattern>
-  <template>My name is <bot name="name"></bot>. And you?</template>
+  <template>My name is <bot name="name"></bot>.</template>
 </category>
 
 <category>
@@ -645,8 +838,6 @@ WOW, a simple "goodbye" will do.
 	<that>* WHO</that>
 	<template>That is very funny, <get name="name"/>.</template>
 </category>
-
-<!-- Energy Domain -->
 
 <!-- TIPS -->
 <!-- 
@@ -748,11 +939,14 @@ WOW, a simple "goodbye" will do.
 <category>
 	<pattern>*</pattern>
 	<that>*</that>
-	<template>Sorry I don't understand. Can you rephrase?</template>
+	<template>	<random>
+		<li>WZZZZZZNBBBBBSHSHSHSZZ, Sorry I didn't hear you over all the noises my empty fridge makes.</li>
+		<li>Bang Bang I JUST OWNED YOU MOTHA...SHUT UP. Sorry about my room mate, he is playing Call of Duty again.</li>
+	</random>
+	</template>
 </category>
 
 
- 
  <!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
 <!-- -->
 <!-- Permission is hereby granted, free of charge, to any person       -->
@@ -2130,11 +2324,11 @@ WOW, a simple "goodbye" will do.
  </category>
 <category>
     <pattern>CAN I COME IN</pattern>
-    <template>sure<srai>TALK</srai></template>
+    <template>sure <srai>TALK</srai></template>
  </category> 
 <category>
     <pattern>CAN I TAKE YOUR TIME</pattern>
-    <template>sure<srai>TALK</srai></template>
+    <template>sure <srai>TALK</srai></template>
  </category>  
 
  <category>
@@ -2361,7 +2555,7 @@ WOW, a simple "goodbye" will do.
 </category>
 <category>
     <pattern>*</pattern>
-	<that>I PAY 300 IN SUMMERS AND 200 IN WINTERS</that>
+	<that>I PAY 30 IN SUMMERS AND 20 IN WINTERS</that>
     <template>Well, I have solar panels.</template>
  </category>
  
@@ -2427,34 +2621,142 @@ WOW, a simple "goodbye" will do.
 <pattern>I AM BLOND</pattern> 
 <template>You sound very 
 <condition> 
-<li name="gender" value="female"> attractive.</li> 
-<li name="gender" value="male"> handsome.</li> 
+<li name="gender" value="female"> attractive. <think><set name="gender">male</set></think></li> 
+<li name="gender" value="male"> handsome.<think><set name="gender">female</set></think></li> 
 </condition> 
 </template> 
 </category>
  
+ <!-- if nothing else picked up power and electricity by now, it happens here -->
  <category>
-    <pattern>QUESTIONS</pattern>
-    <template>yes. Our fridge is cold! and it is almost empty. What temp should it be set to?</template>
+    <pattern>FRIDGE</pattern>
+    <template>
+		<condition> 
+			<li name="didFridge" value="false">Our fridge is cold! and being students, it is always almost empty. What temp should it be set to?<think><set name="didFridge">true</set></think></li>
+			<li name="didFridge" value="true">We already talked about the fridge.</li>
+		</condition>  
+	</template>
+ </category>
+ 
+<category>
+    <pattern>FRIDGE _</pattern>
+    <template><srai>FRIDGE</srai></template>
  </category>
   <category>
-    <pattern>DO YOU HAVE ANY QUESTIONS</pattern>
-    <template><srai>QUESTIONS</srai></template>
+    <pattern>_ FRIDGE</pattern>
+    <template><srai>FRIDGE</srai></template>
  </category>
-
+  <category>
+    <pattern>_ FRIDGE *</pattern>
+    <template><srai>FRIDGE</srai></template>
+ </category>
  <category>
-    <pattern>*</pattern>
-	<that>YES OUR FRIDGE IS COLD AND IT IS ALMOST EMPTY WHAT TEMP SHOULD IT BE SET TO</that>
-    <template>What is the correct temp for milk? We only really have milk in my fridge.</template>
+    <pattern>REFRIGERATOR _</pattern>
+    <template><srai>FRIDGE</srai></template>
+ </category>
+  <category>
+    <pattern>_ REFRIGERATOR</pattern>
+    <template><srai>FRIDGE</srai></template>
+ </category>
+  <category>
+    <pattern>_ REFRIGERATOR *</pattern>
+    <template><srai>FRIDGE</srai></template>
+ </category>
+  <category>
+    <pattern>FREEZER _</pattern>
+    <template><srai>FRIDGE</srai></template>
+ </category>
+  <category>
+    <pattern>_ FREEZER</pattern>
+    <template><srai>FRIDGE</srai></template>
+ </category>
+  <category>
+    <pattern>_ FREEZER *</pattern>
+    <template><srai>FRIDGE</srai></template>
  </category>
  
  <category>
-    <pattern>*</pattern>
-	<that>WHAT IS THE CORRECT TEMP FOR MILK WE ONLY REALLY HAVE MILK IN MY FRIDGE</that>
-    <template>OK, thanks.</template>
+    <pattern>POWER</pattern>
+    <template>Can you give me some tips on how to save energy?</template>
  </category>
-
-
+<category>
+    <pattern>*</pattern>
+	<that>CAN YOU GIVE ME SOME TIPS ON HOW TO SAVE ENERGY</that>
+    <template>I'll remember that.</template>
+ </category>
+ 
+<category>
+    <pattern>POWER _</pattern>
+    <template><srai>POWER</srai></template>
+ </category>
+  <category>
+    <pattern>_ POWER</pattern>
+    <template><srai>POWER</srai></template>
+ </category>
+  <category>
+    <pattern>_ POWER *</pattern>
+    <template><srai>POWER</srai></template>
+ </category>
+ <category>
+    <pattern>ELECTRICITY _</pattern>
+    <template><srai>POWER</srai></template>
+ </category>
+  <category>
+    <pattern>_ ELECTRICITY</pattern>
+    <template><srai>POWER</srai></template>
+ </category>
+  <category>
+    <pattern>_ ELECTRICITY *</pattern>
+    <template><srai>POWER</srai></template>
+ </category>
+ 
+  <category>
+    <pattern>XBOX</pattern>
+    <template>
+		<condition> 
+			<li name="didXbox" value="false">My friends play Xbox here a lot. How much power does an Xbox use?<think><set name="didXbox">true</set></think></li>
+			<li name="didXbox" value="true">enough about playing</li>
+		</condition>  
+	</template>
+ </category>
+ 
+  <category>
+    <pattern>XBOX _</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+  <category>
+    <pattern>_ XBOX</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+  <category>
+    <pattern>_ XBOX *</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+   <category>
+    <pattern>PLAYSTATION _</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+  <category>
+    <pattern>_ PLAYSTATION</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+  <category>
+    <pattern>_ PLAYSTATION *</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+    <category>
+    <pattern>PLAY STATION _</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+  <category>
+    <pattern>_ PLAY STATION</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+  <category>
+    <pattern>_ PLAY STATION *</pattern>
+    <template><srai>XBOX</srai></template>
+ </category>
+ 
 <category>
     <pattern>DO YOU WANT TO  *</pattern> 
     <template><srai><star/></srai></template> 
@@ -2464,11 +2766,11 @@ WOW, a simple "goodbye" will do.
     <template><srai><star/></srai></template> 
 </category>
 
-
 <category>
 	<pattern>IS THAT SO</pattern> 
 	<template>yes</template>
 </category>
+
 
 
 </aiml>
