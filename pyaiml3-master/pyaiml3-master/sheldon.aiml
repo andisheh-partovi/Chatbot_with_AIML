@@ -93,18 +93,18 @@
  <category>
     <pattern>*</pattern>
 	<that>YES OUR FRIDGE IS COLD AND BEING STUDENTS IT IS ALWAYS ALMOST EMPTY WHAT TEMP SHOULD IT BE SET TO</that>
-    <template>Hmm... What is the correct temp for milk? We only really have milk in my fridge.</template>
+    <template>Hmm... What is the correct temp for milk? We only really have milk in our fridge.</template>
  </category>
  
   <category>
     <pattern>*</pattern>
 	<that>OUR FRIDGE IS COLD AND BEING STUDENTS IT IS ALWAYS ALMOST EMPTY WHAT TEMP SHOULD IT BE SET TO</that>
-    <template>Hmm... What is the correct temp for milk? We only really have milk in my fridge.</template>
+    <template>Hmm... What is the correct temp for milk? We only really have milk in our fridge.</template>
  </category>
  
  <category>
     <pattern>*</pattern>
-	<that>HMM WHAT IS THE CORRECT TEMP FOR MILK WE ONLY REALLY HAVE MILK IN MY FRIDGE</that>
+	<that>HMM WHAT IS THE CORRECT TEMP FOR MILK WE ONLY REALLY HAVE MILK IN OUR FRIDGE</that>
     <template>OK, thanks.</template>
  </category>
 
@@ -113,18 +113,18 @@
   <category>
     <pattern>*</pattern>
 	<that>YES MY FRIENDS PLAY XBOX HERE A LOT HOW MUCH POWER DOES AN XBOX USE</that>
-    <template>I see. In any ways playing too much can not be good for their health.</template>
+    <template>I see. In any case, playing too much is bad for their health.</template>
  </category>
  
    <category>
     <pattern>*</pattern>
 	<that>MY FRIENDS PLAY XBOX HERE A LOT HOW MUCH POWER DOES AN XBOX USE</that>
-    <template>I see. In any ways playing too much can not be good for their health.</template>
+    <template>I see. In any case, playing too much is bad for their health.</template>
  </category>
  <!-- 
  <category>
     <pattern>*</pattern>
-	<that>I SEE IN ANY WAYS PLAYING TOO MUCH CAN NOT BE GOOD FOR THEIR HEALTH</that>
+	<that>I see. In any case, playing too much is bad for their health.</that>
     <template>OK, thanks.</template>
  </category>
   -->
@@ -139,7 +139,7 @@
 		<think><set name="didXbox">false</set></think>     <!-- Initializing values must be done here -->
 		<think><set name="didFridge">false</set></think>
 		<think><set name="finish">false</set></think>
-		Hi there. 
+		Hi there. How can I help you?
 	</template>
  </category>
  <category>
@@ -2715,7 +2715,7 @@ WOW, a simple "goodbye" will do.
     <template>
 		<condition> 
 			<li name="didXbox" value="false">My friends play Xbox here a lot. How much power does an Xbox use?<think><set name="didXbox">true</set></think></li>
-			<li name="didXbox" value="true">enough about playing</li>
+			<li name="didXbox" value="true">enough about Xbox</li>
 		</condition>  
 	</template>
  </category>
