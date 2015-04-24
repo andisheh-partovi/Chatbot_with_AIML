@@ -23,7 +23,7 @@ k.setBotPredicate("winterBill", "$20")
 logfile = open("log.txt", 'a')
 
 #Enter the main input/output loop
-print("type exit to quit")
+print("Hi there!")
 user = input("consultant> ")
 while(user != "exit" ):
 	logfile.write("U: "+str(user)+"\r")

@@ -2,7 +2,7 @@
 <aiml version="1.0.1" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
 
 <!-- Topics -->
-<!-- They have to be included here otherwise we'll have a problem -->
+<!-- They have to be included here otherwise other keyword catchers may catch them -->
 
  <category>
     <pattern>QUESTIONS</pattern>
@@ -41,19 +41,19 @@
     <template><srai>QUESTIONS</srai></template>
  </category>
  <category>
-    <pattern>ANY OTHER QUESTIONS</pattern>
+    <pattern>OTHER QUESTIONS</pattern>
     <template><srai>QUESTIONS</srai></template>
  </category>
  <category>
-    <pattern>ANY OTHER QUESTIONS _</pattern>
+    <pattern>OTHER QUESTIONS _</pattern>
     <template><srai>QUESTIONS</srai></template>
  </category>
   <category>
-    <pattern>_ ANY OTHER QUESTIONS *</pattern>
+    <pattern>_ OTHER QUESTIONS *</pattern>
     <template><srai>QUESTIONS</srai></template>
  </category>
   <category>
-    <pattern>_ ANY OTHER QUESTIONS</pattern>
+    <pattern>_ OTHER QUESTIONS</pattern>
     <template><srai>QUESTIONS</srai></template>
  </category>
  <category>
@@ -88,6 +88,7 @@
     <pattern>ANYTHING ELSE</pattern>
     <template><srai>QUESTIONS</srai></template>
  </category>
+ 
  <!-- fridge -->
  
  <category>
@@ -121,6 +122,21 @@
 	<that>MY FRIENDS PLAY XBOX HERE A LOT HOW MUCH POWER DOES AN XBOX USE</that>
     <template>I see. In any case, playing too much is bad for their health.</template>
  </category>
+ 
+ <!-- solar -->
+ 
+  <category>
+    <pattern>*</pattern>
+	<that>OH SORRY BY THE WAY ARE SOLAR PANELS ANY GOOD</that>
+    <template>I wanna install them, so how do I proceed?</template>
+ </category>
+ 
+   <category>
+    <pattern>*</pattern>
+	<that>I WANNA INSTALL THEM SO HOW DO I PROCEED</that>
+    <template>Cool, I'll look more into it and do it.</template>
+ </category>
+
  <!-- 
  <category>
     <pattern>*</pattern>
@@ -139,6 +155,7 @@
 		<think><set name="didXbox">false</set></think>     <!-- Initializing values must be done here -->
 		<think><set name="didFridge">false</set></think>
 		<think><set name="finish">false</set></think>
+		<think><set name="didSolar">false</set></think>
 		Hi there. How can I help you?
 	</template>
  </category>
@@ -935,14 +952,17 @@ WOW, a simple "goodbye" will do.
 </category>
  -->
 
-<!-- Catching errors utterances in the data base -->
+<!-- Catching errors: utterances not in the data base -->
 <category>
 	<pattern>*</pattern>
 	<that>*</that>
-	<template>	<random>
-		<li>WZZZZZZNBBBBBSHSHSHSZZ, Sorry I didn't hear you over all the noises my empty fridge makes.</li>
-		<li>Bang Bang I JUST OWNED YOU MOTHA...SHUT UP. Sorry about my room mate, he is playing Call of Duty again.</li>
-	</random>
+	<template>	
+		<condition> 
+			<li name="didFridge" value="false">WZZZZZZNBBBBBSHSHSHSZZ, Sorry I didn't hear you over all the noises my empty fridge makes.</li> 
+			<li name="didXbox" value="false">Bang Bang I JUST OWNED YOU MOTHA...SHUT UP. Sorry about my room mate, he is playing Call of Duty again.</li>
+			<li name="didSolar" value="false">Oh sorry by the way, are solar panels any good?<think><set name="didSolar">true</set></think></li>
+			<li name="finish" value="false">Sorry I didn't catch that. I was thinking about my assignments. I better go, otherwise I can't finish them.</li>			
+		</condition> 
 	</template>
 </category>
 
@@ -2533,14 +2553,6 @@ WOW, a simple "goodbye" will do.
     <pattern>_ PAYING *</pattern>
     <template><srai>BILL</srai></template>
  </category>
-   <category>
-    <pattern>WHAT IS YOUR BILL</pattern>
-    <template><srai>BILL</srai></template>
- </category>
-<category>
-    <pattern>WHAT IS THE AMOUNT YOUR QUARTERLY POWER BILL COMES TO</pattern>
-    <template><srai>BILL</srai></template>
- </category>
  <category>
     <pattern>_ BILL *</pattern>
     <template><srai>BILL</srai></template>
@@ -2608,6 +2620,30 @@ WOW, a simple "goodbye" will do.
  </category>
   <category>
     <pattern>_ TIP *</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+     <category>
+    <pattern>ADVICE _</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ADVICE</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ADVICE *</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+      <category>
+    <pattern>ADVICES _</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ADVICES</pattern>
+    <template><srai>TIPS</srai></template>
+ </category>
+  <category>
+    <pattern>_ ADVICES *</pattern>
     <template><srai>TIPS</srai></template>
  </category>
  
